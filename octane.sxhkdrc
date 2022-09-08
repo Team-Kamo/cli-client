@@ -1,0 +1,5 @@
+win + c
+    octaine status put
+
+win + v
+    octaine status get | xdotool type
