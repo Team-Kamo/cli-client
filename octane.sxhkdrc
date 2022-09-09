@@ -1,5 +1,8 @@
 win + c
-    octaine status put
+    $HOME/.octane/octane.py room connect
+    $HOME/.octane/octane.py status put
+    $HOME/.octane/octane.py content put
+    $HOME/.octane/octane.py room disconnect
 
 win + v
-    octaine status get | xdotool type
+    $HOME/.octane/octane.py status get | xdotool type

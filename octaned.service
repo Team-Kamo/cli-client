@@ -1,0 +1,12 @@
+[Unit]
+Description=Quantilier Startup Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=$HOME/.octane/
+ExecStart=/usr/bin/sxhkd -c $HOME/.octane/octane.sxhkdrc
+
+[Install]
+WantedBy=multi-user.target
