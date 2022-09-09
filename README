@@ -1,0 +1,10 @@
+from msilib.schema import InstallExecuteSequence
+
+
+cli-client
+==========
+sxhkd, xclip, xdotool required
+
+Install
+    
+    ./install.sh
