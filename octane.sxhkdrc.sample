@@ -1,8 +1,5 @@
-win + c
-    $HOME/.octane/octane.py room connect
-    $HOME/.octane/octane.py status put
-    $HOME/.octane/octane.py content put
-    $HOME/.octane/octane.py room disconnect
+ctrl + alt + c
+    xdotool key ctrl+c;$HOME/.octane/octane.py copy;echo "copy"
 
-win + v
-    $HOME/.octane/octane.py status get | xdotool type
+ctrl + alt + v
+    $HOME/.octane/octane.py paste | xclip -sel clip;xdotool key ctrl+v;echo "paste"
