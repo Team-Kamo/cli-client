@@ -1,5 +1,5 @@
 [Unit]
-Description=Quantilier Startup Service
+Description=Octane
 Wants=network-online.target
 After=network-online.target
 

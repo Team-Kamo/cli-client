@@ -9,7 +9,7 @@ url = "http://127.0.0.1:3000/api/v1/"
 
 def newroom():
     obj = {'name': 'string'}
-    x = requests.post(url, json=obj)
+    x = requests.post(url+"room/", json=obj)
     with open("id", "w") as f:  # .octane.d/id
         f.write(str(x.json()["id"]))
     return x
