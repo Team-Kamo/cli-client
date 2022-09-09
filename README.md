@@ -1,2 +1,2 @@
 # cli-client
-xclip, xdotool required
+sxhkd, xclip, xdotool required
