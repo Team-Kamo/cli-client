@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+from hmac import digest
 import requests, sys, subprocess
 from datetime import datetime
+import time
 from hashlib import blake2b
 
 url = "http://127.0.0.1:3000/api/v1/"
@@ -61,15 +63,16 @@ elif sys.argv[1] == "status":
     elif sys.argv[2] == "put":
         data = b"mockup"
         # data = subprocess.run(['xclip', '-o', '-selection'], stdout=subprocess.PIPE).stdout.decode('utf-8')
-        hashval = blake2b(data).hexdigest()
+        hashval = blake2b(data, digest_size=32).hexdigest()
         print(hashval)
         obj = {"device": "string",
                 "hash": hashval,
-                "mime": "string",
+                "mime": "text/plain",
                 "name": "string",
-                "timestamp": 0,
+                "timestamp": int(time.time()),
                 "type": "string"}
         x = requests.put(url, json=obj)
 
 
 print(x.text)
+print(x.status_code)
